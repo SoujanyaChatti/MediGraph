@@ -1,0 +1,8 @@
+[project]
+name = "medigraph"
+version = "0.1.0"
+description = "Graph-native medication safety intelligence"
+entry-point = "main.jac"
+
+[serve]
+base_route_app = "app"

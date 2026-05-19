@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
+}
+
+.react-flow__node-medigraph {
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1.5px solid;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e2e8f0;
+  min-width: 100px;
+  text-align: center;
+}
