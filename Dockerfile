@@ -4,10 +4,11 @@ WORKDIR /app
 
 RUN pip install jaclang byllm python-dotenv requests
 
+RUN apt-get update && apt-get install -y nodejs npm curl
+
 COPY . .
 
-RUN apt-get update && apt-get install -y nodejs npm curl && \
-    cd frontend && npm install && npm run build
+RUN cd frontend && npm install && npm run build
 
 EXPOSE 10000
 
