@@ -10,6 +10,8 @@ COPY . .
 
 RUN cd frontend && npm install && npm run build
 
+RUN pip install uvicorn
+
 EXPOSE 10000
 
-CMD ["jac", "start", "main.jac", "-p", "10000"]
+CMD ["jac", "start", "main.jac", "-p", "10000", "--no-client"]
