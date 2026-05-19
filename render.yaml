@@ -1,0 +1,13 @@
+cat > render.yaml << 'EOF'
+services:
+  - type: web
+    name: medigraph
+    runtime: python
+    buildCommand: "pip install jaclang==0.10.2 byllm==0.4.20 python-dotenv requests && cd frontend && npm install && npm run build"
+    startCommand: "jac serve main.jac --port $PORT"
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+EOF
